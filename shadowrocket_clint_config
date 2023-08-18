@@ -1,0 +1,21 @@
+[General]
+bypass-system = true
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 211.25.202.171, 103.169.90.58
+loglevel = notify
+
+
+[Rule]
+DOMAIN-SUFFIX,my,Proxy
+IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
+
+DOMAIN-SUFFIX,tiktokcdn.com,Proxy,no-resolve
+DOMAIN-SUFFIX,tiktok.com,Proxy,no-resolve
+DOMAIN-SUFFIX,tiktokv.com,Proxy,no-resolve
+DOMAIN-SUFFIX,tiktokcdn.com,Proxy,no-resolve
+
+// last chance
+GEOIP,MY,Proxy,no-resolve
+
+FINAL,Proxy
